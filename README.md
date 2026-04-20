@@ -14,7 +14,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--white);font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden}
-
+ 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06);padding:0 60px;height:64px;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
 .nav-logo{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--white);letter-spacing:-1px;text-decoration:none}
@@ -28,12 +28,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .mobile-menu{display:none;position:fixed;inset:64px 0 0 0;background:rgba(8,13,15,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:28px}
 .mobile-menu.open{display:flex}
 .mobile-menu a{font-size:18px;color:rgba(255,255,255,.7);text-decoration:none;font-weight:300;letter-spacing:1px}
-
+ 
 /* ── STRIPE ── */
 .stripe{display:flex;height:4px}
 .stripe span{flex:1}
 .s1{background:var(--dark);flex:3!important}.s2{background:var(--lblue)}.s3{background:var(--blue)}.s4{background:var(--dblue)}.s5{background:var(--red)}
-
+ 
 /* ── HERO ── */
 .hero{min-height:100vh;background:var(--dark);display:flex;flex-direction:column;justify-content:flex-end;padding:140px 80px 80px;position:relative;overflow:hidden}
 .hero-circles{position:absolute;inset:0;pointer-events:none}
@@ -50,7 +50,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .hero-scroll{position:absolute;bottom:36px;right:60px;display:flex;flex-direction:column;align-items:center;gap:6px;animation:fadeup .8s .6s both}
 .hero-scroll span{font-size:9px;letter-spacing:3px;color:rgba(255,255,255,.2);text-transform:uppercase;writing-mode:vertical-rl}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.15),transparent)}
-
+ 
 /* ── SECTION BASICS ── */
 .section{padding:100px 80px}
 .section.gray-bg{background:var(--offwhite)}
@@ -61,7 +61,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .section-sub{font-size:16px;color:var(--text2);font-weight:300;line-height:1.7;max-width:640px;margin-bottom:52px}
 .section-sub.light{color:rgba(255,255,255,.45)}
 .divider-line{height:2px;background:var(--blue);width:48px;margin-bottom:40px}
-
+ 
 /* ── SERVICES GRID ── */
 .services-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-bottom:80px}
 .svc-intro-text{}
@@ -69,7 +69,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .stat-card{background:var(--dark);border-radius:8px;padding:24px;text-align:center}
 .stat-num{font-family:'Playfair Display',serif;font-size:42px;font-weight:700;line-height:1;margin-bottom:6px}
 .stat-lbl{font-size:11px;color:rgba(255,255,255,.38);letter-spacing:1px;font-weight:300;line-height:1.5}
-
+ 
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--mgray);border-radius:12px;overflow:hidden}
 .svc-tile{background:var(--white);padding:36px 32px;transition:background .25s}
 .svc-tile:hover{background:var(--gray)}
@@ -79,7 +79,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .svc-tile-d{font-size:13px;color:var(--text2);line-height:1.7;font-weight:300}
 .svc-tile-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
 .tag{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px;font-weight:500}
-
+ 
 /* ── PLANS ── */
 .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .plan-card{border-radius:10px;overflow:hidden;transition:transform .25s}
@@ -97,7 +97,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .pf-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:5px}
 .pf-lbl{font-weight:500}
 .pf-val{color:#666;font-weight:300}
-
+ 
 /* ── PROCESS ── */
 .process-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
 .process-grid::before{content:'';position:absolute;top:22px;left:11%;right:11%;height:1px;background:var(--mgray);z-index:0}
@@ -105,8 +105,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .ps-num{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--white);margin-bottom:14px}
 .ps-t{font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px}
 .ps-d{font-size:11px;color:var(--text2);font-weight:300;line-height:1.5;padding:0 4px}
-
-
+ 
+ 
 .audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .audit-deliverables{display:flex;flex-direction:column;gap:10px}
 .audit-item{background:rgba(255,255,255,.04);border-radius:8px;padding:18px 20px;border-left:3px solid var(--blue);display:flex;gap:16px;align-items:flex-start}
@@ -121,7 +121,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .audit-meta{display:flex;flex-direction:column;gap:8px}
 .audit-meta-row{display:flex;gap:10px;align-items:center;font-size:13px;color:rgba(255,255,255,.5);font-weight:300}
 .audit-meta-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
-
+ 
 /* ── BRAND SECTION ── */
 .brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .brand-list{display:flex;flex-direction:column;gap:0}
@@ -138,7 +138,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .bcb-items{display:flex;flex-direction:column;gap:6px;margin-bottom:24px}
 .bcb-item{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:rgba(255,255,255,.55);font-weight:300;line-height:1.4}
 .bcb-dot{width:4px;height:4px;border-radius:50%;flex-shrink:0;margin-top:7px}
-
+ 
 /* ── DESIGN SECTION ── */
 .design-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .design-card{border-radius:8px;overflow:hidden;background:var(--gray)}
@@ -150,7 +150,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .dc-items{list-style:none;display:flex;flex-direction:column;gap:6px}
 .dc-items li{font-size:12px;color:var(--text2);font-weight:300;padding-left:14px;position:relative;line-height:1.55}
 .dc-items li::before{content:'▸';position:absolute;left:0;color:var(--blue);font-size:8px;top:3px}
-
+ 
 /* ── CTA SECTION ── */
 .cta-section{background:var(--dark);text-align:center;padding:120px 80px;position:relative;overflow:hidden}
 .cta-circles{position:absolute;inset:0;pointer-events:none}
@@ -162,7 +162,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,13,15,.96
 .cta-contact{display:flex;align-items:center;gap:10px;font-size:15px;color:rgba(255,255,255,.65);font-weight:300}
 .cta-contact strong{color:var(--white);font-weight:400}
 .cc-dot{width:6px;height:6px;border-radius:50%}
-
+ 
 /* ── FOOTER ── */
 footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap}
 .footer-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--white);letter-spacing:-1px}
@@ -171,12 +171,107 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
 .footer-links a{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
 .footer-links a:hover{color:rgba(255,255,255,.7)}
 .footer-legal{font-size:11px;color:rgba(255,255,255,.15)}
-
+ 
 /* ── ANIMATIONS ── */
-@keyframes fadeup{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
+@keyframes fadeup{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@keyframes slideleft{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideright{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleup{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+@keyframes scrollbar{0%{transform:translateY(0)}50%{transform:translateY(14px)}100%{transform:translateY(0)}}
+@keyframes stripe-slide{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes spin-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes count-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+ 
+/* reveal base — 4 variants */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-36px);transition:opacity .7s .1s cubic-bezier(.22,.61,.36,1),transform .7s .1s cubic-bezier(.22,.61,.36,1)}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(36px);transition:opacity .7s .15s cubic-bezier(.22,.61,.36,1),transform .7s .15s cubic-bezier(.22,.61,.36,1)}
+.reveal-right.visible{opacity:1;transform:none}
+.reveal-scale{opacity:0;transform:scale(.93);transition:opacity .65s .1s cubic-bezier(.22,.61,.36,1),transform .65s .1s cubic-bezier(.22,.61,.36,1)}
+.reveal-scale.visible{opacity:1;transform:scale(1)}
+ 
+/* stagger children */
+.stagger > *{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1)}
+.stagger.visible > *:nth-child(1){opacity:1;transform:none;transition-delay:.05s}
+.stagger.visible > *:nth-child(2){opacity:1;transform:none;transition-delay:.15s}
+.stagger.visible > *:nth-child(3){opacity:1;transform:none;transition-delay:.25s}
+.stagger.visible > *:nth-child(4){opacity:1;transform:none;transition-delay:.35s}
+.stagger.visible > *:nth-child(5){opacity:1;transform:none;transition-delay:.45s}
+.stagger.visible > *:nth-child(6){opacity:1;transform:none;transition-delay:.55s}
+ 
+/* scroll indicator animate */
+.scroll-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.4);animation:scrollbar 1.8s ease-in-out infinite}
+ 
+/* stripe shimmer */
+.stripe-shimmer{position:relative;overflow:hidden}
+.stripe-shimmer::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);transform:translateX(-100%);animation:stripe-slide 2.2s 1s ease both}
+ 
+/* hero circles float */
+.hero-circle:nth-child(1){animation:float 8s ease-in-out infinite}
+.hero-circle:nth-child(2){animation:float 11s 2s ease-in-out infinite}
+.hero-circle:nth-child(3){animation:float 9s 4s ease-in-out infinite}
+ 
+/* service tile hover */
+.svc-tile{transition:background .25s,transform .25s,box-shadow .25s}
+.svc-tile:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(32,119,194,.1)}
+.svc-tile-icon{transition:width .3s}
+.svc-tile:hover .svc-tile-icon{width:56px}
+ 
+/* plan card hover */
+.plan-card{transition:transform .28s cubic-bezier(.22,.61,.36,1),box-shadow .28s}
+.plan-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.12)}
+ 
+/* btn hover lift */
+.btn-primary{transition:background .2s,transform .18s,box-shadow .18s}
+.btn-primary:hover{background:var(--dblue);transform:translateY(-2px);box-shadow:0 8px 24px rgba(32,119,194,.28)}
+.btn-primary:active{transform:translateY(0);box-shadow:none}
+.btn-outline{transition:all .2s,transform .18s}
+.btn-outline:hover{transform:translateY(-2px)}
+ 
+/* nav link underline effect */
+.nav-links a{position:relative}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-4px;height:1px;width:0;background:var(--blue);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+ 
+/* stat card hover */
+.stat-card{transition:transform .25s,background .25s}
+.stat-card:hover{transform:translateY(-3px);background:#111a1f}
+ 
+/* audit item hover */
+.audit-item{transition:background .22s,transform .22s}
+.audit-item:hover{background:rgba(255,255,255,.07);transform:translateX(4px)}
+ 
+/* brand item hover */
+.brand-item{transition:background .2s}
+.brand-item:hover{background:var(--gray);padding-left:8px;padding-right:8px;border-radius:6px;transition:background .2s,padding .2s}
+ 
+/* design card hover */
+.design-card{transition:transform .25s,box-shadow .25s}
+.design-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,.08)}
+ 
+/* process step hover */
+.process-step{transition:transform .2s}
+.process-step:hover{transform:translateY(-5px)}
+.ps-num{transition:transform .2s,box-shadow .2s}
+.process-step:hover .ps-num{transform:scale(1.12);box-shadow:0 6px 18px rgba(0,0,0,.2)}
+ 
+/* counter num */
+.stat-num{display:inline-block;transition:transform .3s}
+.stat-card:hover .stat-num{transform:scale(1.08)}
+ 
+/* section label accent line */
+.section-label{position:relative;padding-left:14px}
+.section-label::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:4px;height:4px;border-radius:50%;background:var(--red)}
+ 
+/* divider line animate */
+.divider-line{width:0;transition:width .8s .3s cubic-bezier(.22,.61,.36,1)}
+.reveal.visible ~ .divider-line,.divider-line-anim{width:48px}
+ 
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .section{padding:80px 40px}
@@ -210,7 +305,7 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
 </style>
 </head>
 <body>
-
+ 
 <!-- ── NAV ── -->
 <nav id="main-nav">
   <a href="#inicio" class="nav-logo">AO</a>
@@ -232,7 +327,7 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
   <a href="#auditoria" class="mob-link">Auditorías</a>
   <a href="#contacto" class="mob-link" style="color:var(--lblue)">Contactar</a>
 </div>
-
+ 
 <!-- ── HERO ── -->
 <section class="hero" id="inicio">
   <div class="hero-circles">
@@ -253,11 +348,11 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
     <div class="scroll-line"></div>
   </div>
 </section>
-
+ 
 <!-- ── SERVICIOS OVERVIEW ── -->
 <section class="section gray-bg" id="servicios">
   <div class="reveal">
-    <div class="section-label">Lo que hago</div>
+    <div class="section-label reveal-left">Lo que hago</div>
     <h2 class="section-title">Servicios que <em style="font-style:italic;font-family:'Playfair Display',serif">impulsan</em> tu marca</h2>
     <div class="divider-line"></div>
   </div>
@@ -266,7 +361,7 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
       <p style="font-size:16px;color:var(--text2);line-height:1.8;font-weight:300;margin-bottom:20px">No soy una agencia masiva. Soy un especialista de alto enfoque que trabaja directamente contigo para construir y escalar tu presencia digital con estrategia real, ejecución profesional y resultados medibles.</p>
       <p style="font-size:16px;color:var(--text2);line-height:1.8;font-weight:300">Combino visión estratégica, creatividad y análisis de datos en un solo lugar — sin intermediarios, sin demoras y con comunicación directa.</p>
     </div>
-    <div class="svc-intro-stats">
+    <div class="svc-intro-stats reveal-right">
       <div class="stat-card"><div class="stat-num" style="color:var(--lblue)">1:1</div><div class="stat-lbl">Atención directa sin agencias</div></div>
       <div class="stat-card"><div class="stat-num" style="color:var(--blue)">360°</div><div class="stat-lbl">Visión integral de tu marca digital</div></div>
       <div class="stat-card"><div class="stat-num" style="color:var(--red)">Data</div><div class="stat-lbl">Decisiones basadas en métricas</div></div>
@@ -318,11 +413,11 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
     </div>
   </div>
 </section>
-
+ 
 <!-- ── PLANES ── -->
 <section class="section" id="planes">
   <div class="reveal">
-    <div class="section-label">Gestión mensual de redes</div>
+    <div class="section-label reveal-left">Gestión mensual de redes</div>
     <h2 class="section-title">Planes para cada<br>etapa de tu marca</h2>
     <div class="divider-line"></div>
     <p class="section-sub">Elige el nivel que mejor se adapta a tus objetivos. Todos los planes incluyen parrilla de contenido, diseño de posts y gestión de comunidad.</p>
@@ -372,7 +467,7 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
 <!-- ── AUDITORÍA ── -->
 <section class="section dark-bg" id="auditoria">
   <div class="reveal">
-    <div class="section-label" style="color:var(--lblue)">Diagnóstico digital</div>
+    <div class="section-label reveal-left" style="color:var(--lblue)">Diagnóstico digital</div>
     <h2 class="section-title light">Auditoría Estratégica<br>de Meta Ads</h2>
     <div class="divider-line"></div>
     <p class="section-sub light">¿Inviertes en publicidad pero no ves resultados claros? Te entrego el diagnóstico completo de tus cuentas con datos reales y recomendaciones accionables.</p>
@@ -384,7 +479,7 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
       <div class="audit-item lblue"><div class="audit-num" style="color:var(--lblue)">03</div><div><div class="audit-t">Documento de diagnóstico</div><div class="audit-d">Informe detallado con hallazgos, estatus de campañas y recomendaciones específicas y generales para optimizar.</div></div></div>
       <div class="audit-item red"><div class="audit-num" style="color:var(--red)">04</div><div><div class="audit-t">Sesión de consultoría 1–2h</div><div class="audit-d">Reunión virtual o presencial para presentar los hallazgos y asesorarte en qué cambios implementar y cómo priorizarlos.</div></div></div>
     </div>
-    <div class="audit-price-block">
+    <div class="audit-price-block reveal-scale">
       <div class="audit-price-label">Inversión total</div>
       <div class="audit-big-price">$5,000</div>
       <div class="audit-price-note">MXN + IVA</div>
@@ -398,11 +493,11 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
     </div>
   </div>
 </section>
-
+ 
 <!-- ── ESTRATEGIA MARCA ── -->
 <section class="section" id="marca">
   <div class="reveal">
-    <div class="section-label">Construcción de marca</div>
+    <div class="section-label reveal-left">Construcción de marca</div>
     <h2 class="section-title">Tu marca, construida<br>desde la estrategia</h2>
     <div class="divider-line"></div>
   </div>
@@ -416,7 +511,7 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
       <div class="brand-item"><div class="bi-num">06</div><div><div class="bi-t">Plan de contenidos</div><div class="bi-d">Estrategia editorial y lineamientos creativos para publicidad. No incluye producción de creativos.</div></div></div>
       <div class="brand-item"><div class="bi-num">07</div><div><div class="bi-t">Creación de redes sociales</div><div class="bi-d">Alta y configuración profesional de perfiles: bios, nomenclatura, foto de perfil y portadas.</div></div></div>
     </div>
-    <div class="brand-cta-box">
+    <div class="brand-cta-box reveal-scale">
       <div class="bcb-label">Paquete integral</div>
       <div class="bcb-title">Estrategia de Marca & Lanzamiento Digital</div>
       <div class="bcb-price">$10,000</div>
@@ -431,11 +526,11 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
     </div>
   </div>
 </section>
-
+ 
 <!-- ── DISEÑO ── -->
 <section class="section gray-bg">
   <div class="reveal">
-    <div class="section-label">Visual & Creativos</div>
+    <div class="section-label reveal-left">Visual & Creativos</div>
     <h2 class="section-title">Diseño que comunica<br>y convierte</h2>
     <div class="divider-line"></div>
   </div>
@@ -454,11 +549,11 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
     </div>
   </div>
 </section>
-
+ 
 <!-- ── PROCESO ── -->
 <section class="section">
   <div class="reveal">
-    <div class="section-label">Metodología</div>
+    <div class="section-label reveal-left">Metodología</div>
     <h2 class="section-title">Cómo trabajamos juntos</h2>
     <div class="divider-line"></div>
     <p class="section-sub">Un proceso claro y sin sorpresas, de principio a fin.</p>
@@ -472,7 +567,7 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
     <div class="process-step"><div class="ps-num" style="background:var(--blue)">6</div><div class="ps-t">Optimización</div><div class="ps-d">Medimos, ajustamos y mejoramos constantemente.</div></div>
   </div>
 </section>
-
+ 
 <!-- ── CTA ── -->
 <section class="cta-section" id="contacto">
   <div class="cta-circles">
@@ -501,7 +596,7 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
     </div>
   </div>
 </section>
-
+ 
 <!-- ── FOOTER ── -->
 <footer>
   <div><div class="footer-logo">AO</div><div class="footer-tagline">Alfonso Ortiz · Social Media Management</div></div>
@@ -512,22 +607,164 @@ footer{background:#040709;padding:40px 80px;display:flex;justify-content:space-b
   </ul>
   <div class="footer-legal">© 2026 Alfonso Ortiz. Todos los derechos reservados.</div>
 </footer>
-
+ 
 <script>
-/* NAV scroll */
+/* ── NAV scroll effect ── */
+const mainNav=document.getElementById('main-nav');
 window.addEventListener('scroll',()=>{
-  document.getElementById('main-nav').style.background=window.scrollY>40?'rgba(8,13,15,.98)':'rgba(8,13,15,.96)';
+  const y=window.scrollY;
+  mainNav.style.background=y>60?'rgba(8,13,15,.99)':'rgba(8,13,15,.96)';
+  mainNav.style.boxShadow=y>60?'0 2px 24px rgba(0,0,0,.4)':'none';
+  /* parallax hero circles */
+  document.querySelectorAll('.hero-circle').forEach((c,i)=>{
+    c.style.transform=`translateY(${y*(.08+i*.04)}px)`;
+  });
 });
-/* Mobile menu */
+ 
+/* ── Mobile menu ── */
 const mobBtn=document.getElementById('mob-btn');
 const mobMenu=document.getElementById('mob-menu');
-mobBtn.addEventListener('click',()=>mobMenu.classList.toggle('open'));
-document.querySelectorAll('.mob-link').forEach(l=>l.addEventListener('click',()=>mobMenu.classList.remove('open')));
-/* Reveal on scroll */
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
-},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+mobBtn.addEventListener('click',()=>{
+  mobMenu.classList.toggle('open');
+  const hams=mobBtn.querySelectorAll('.ham');
+  if(mobMenu.classList.contains('open')){
+    hams[0].style.transform='rotate(45deg) translate(5px,5px)';
+    hams[1].style.opacity='0';
+    hams[2].style.transform='rotate(-45deg) translate(5px,-5px)';
+  } else {
+    hams.forEach(h=>{h.style.transform='';h.style.opacity='';});
+  }
+});
+document.querySelectorAll('.mob-link').forEach(l=>l.addEventListener('click',()=>{
+  mobMenu.classList.remove('open');
+  mobBtn.querySelectorAll('.ham').forEach(h=>{h.style.transform='';h.style.opacity='';});
+}));
+ 
+/* ── Intersection Observer — reveal classes ── */
+const revealObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      /* animate divider lines inside this block */
+      e.target.querySelectorAll('.divider-line').forEach(d=>d.classList.add('divider-line-anim'));
+    }
+  });
+},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+ 
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stagger').forEach(el=>revealObs.observe(el));
+ 
+/* ── Animated counters on stat cards ── */
+const counterObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting||e.target.dataset.counted) return;
+    e.target.dataset.counted='1';
+    const el=e.target.querySelector('.stat-num');
+    if(!el)return;
+    const txt=el.textContent.trim();
+    /* only animate pure numbers */
+    const num=parseInt(txt.replace(/[^0-9]/g,''));
+    if(isNaN(num)||txt.length>4)return;
+    let start=0;
+    const dur=1400;
+    const step=timestamp=>{
+      if(!start)start=timestamp;
+      const prog=Math.min((timestamp-start)/dur,1);
+      const ease=1-Math.pow(1-prog,4);
+      el.textContent=Math.round(ease*num).toLocaleString()+(txt.replace(/[0-9]/g,''));
+      if(prog<1)requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+},{threshold:0.5});
+document.querySelectorAll('.stat-card').forEach(c=>counterObs.observe(c));
+ 
+/* ── Add stagger class to grids ── */
+document.querySelectorAll('.services-grid,.plans-grid,.design-grid,.svc-intro-stats,.process-grid').forEach(g=>{
+  g.classList.add('stagger');
+  revealObs.observe(g);
+});
+ 
+/* ── Smooth active nav link highlight ── */
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-links a');
+const sectionObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navLinks.forEach(l=>{
+        l.style.color=l.getAttribute('href')==='#'+e.target.id?'#fff':'';
+      });
+    }
+  });
+},{threshold:0.4});
+sections.forEach(s=>sectionObs.observe(s));
+ 
+/* ── Scroll-triggered stripe shimmer on first load ── */
+document.querySelectorAll('.stripe').forEach(s=>s.classList.add('stripe-shimmer'));
+ 
+/* ── Add scroll-dot to hero scroll indicator ── */
+const scrollLine=document.querySelector('.scroll-line');
+if(scrollLine){
+  const dot=document.createElement('div');
+  dot.className='scroll-dot';
+  scrollLine.parentNode.insertBefore(dot,scrollLine);
+}
+ 
+/* ── Plan card tilt on mousemove ── */
+document.querySelectorAll('.plan-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    const x=e.clientX-r.left-r.width/2;
+    const y=e.clientY-r.top-r.height/2;
+    card.style.transform=`translateY(-6px) rotateX(${(-y/r.height*4).toFixed(1)}deg) rotateY(${(x/r.width*4).toFixed(1)}deg)`;
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform='';
+    card.style.transition='transform .4s ease';
+    setTimeout(()=>card.style.transition='',400);
+  });
+});
+ 
+/* ── Audit item sequential reveal ── */
+const auditItems=document.querySelectorAll('.audit-item');
+const auditObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    auditItems.forEach((item,i)=>{
+      setTimeout(()=>{
+        item.style.opacity='1';
+        item.style.transform='none';
+      },i*120);
+    });
+    auditObs.disconnect();
+  });
+},{threshold:0.2});
+auditItems.forEach(item=>{
+  item.style.opacity='0';
+  item.style.transform='translateX(-20px)';
+  item.style.transition='opacity .5s ease, transform .5s ease';
+});
+if(auditItems.length)auditObs.observe(auditItems[0]);
+ 
+/* ── Brand item sequential reveal ── */
+const brandItems=document.querySelectorAll('.brand-item');
+const brandObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    brandItems.forEach((item,i)=>{
+      setTimeout(()=>{
+        item.style.opacity='1';
+        item.style.transform='none';
+      },i*80);
+    });
+    brandObs.disconnect();
+  });
+},{threshold:0.1});
+brandItems.forEach(item=>{
+  item.style.opacity='0';
+  item.style.transform='translateY(14px)';
+  item.style.transition='opacity .45s ease, transform .45s ease';
+});
+if(brandItems.length)brandObs.observe(brandItems[0].closest('section'));
 </script>
 </body>
 </html>
