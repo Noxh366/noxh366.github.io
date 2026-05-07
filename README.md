@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Alfonso Ortiz — Social Media Management</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -15,15 +15,11 @@
   --nav-h:66px;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{width:100%;min-width:320px;max-width:100%!important}
+#app,main,.page,.book{width:100%!important;max-width:100%!important}
 html{scroll-behavior:smooth;font-size:16px}
-body{background:var(--white);font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden;cursor:none}
+body{background:var(--white);font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden}
 
-/* ══ CUSTOM CURSOR ══ */
-.cursor{position:fixed;z-index:9999;pointer-events:none;mix-blend-mode:difference}
-.cursor-dot{width:8px;height:8px;background:#fff;border-radius:50%;transform:translate(-50%,-50%)}
-.cursor-ring{width:36px;height:36px;border:1.5px solid rgba(255,255,255,.6);border-radius:50%;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s}
-.cursor-ring.hover{width:56px;height:56px;border-color:var(--blue)}
-@media(hover:none){.cursor{display:none}body{cursor:auto}}
 
 /* ══ STRIPE ══ */
 .stripe{display:flex;height:4px}
@@ -117,7 +113,8 @@ nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.4)}
 
 /* ══ TRABAJO / VIDEOS ══ */
 .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.video-card{border-radius:10px;overflow:hidden;position:relative;background:var(--dark);aspect-ratio:9/16;cursor:pointer}
+.video-card{border-radius:10px;overflow:hidden;position:relative;background:var(--dark);aspect-ratio:9/16;cursor:pointer;min-height:280px}
+.video-card:hover img{transform:scale(1.06)}
 .video-card video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 .video-card:hover video{transform:scale(1.04)}
 .video-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.8) 0%,transparent 50%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px 16px;opacity:0;transition:opacity .3s}
@@ -211,7 +208,7 @@ nav.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.4)}
 .ctag{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border:1px solid rgba(255,255,255,.09);border-radius:20px;color:rgba(255,255,255,.25);font-family:'Syne',sans-serif}
 
 /* ══ FOOTER ══ */
-footer{background:#040709;padding:36px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer{background:#040709;padding:36px 80px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;width:100%}
 .footer-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--white);letter-spacing:-1px}
 .footer-sub{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:1.5px;margin-top:3px}
 .footer-links{display:flex;gap:22px;list-style:none}
@@ -275,9 +272,7 @@ footer{background:#040709;padding:36px 80px;display:flex;justify-content:space-b
 </head>
 <body>
 
-<!-- ══ CURSOR ══ -->
-<div class="cursor" id="cursor"><div class="cursor-dot" id="c-dot"></div></div>
-<div class="cursor" id="cursor-ring"><div class="cursor-ring" id="c-ring"></div></div>
+
 
 <!-- ══ NAV ══ -->
 <nav id="main-nav">
@@ -418,8 +413,216 @@ footer{background:#040709;padding:36px 80px;display:flex;justify-content:space-b
     <h2 class="sec-title light gs-up" data-es="Trabajo real. Resultados reales." data-en="Real work. Real results.">Trabajo real. Resultados reales.</h2>
     <div class="bar gs-up"></div>
     <p class="sec-sub light gs-up" data-es="Contenido producido para clientes reales — desde reels de marca hasta campañas de alto impacto." data-en="Content produced for real clients — from brand reels to high-impact campaigns.">Contenido producido para clientes reales — desde reels de marca hasta campañas de alto impacto.</p>
+    <p class="gs-up" style="font-size:12px;color:rgba(255,255,255,.3);margin-bottom:28px;font-style:italic;margin-top:-28px" data-es="Haz clic en cualquier video para verlo en YouTube." data-en="Click any video to watch it on YouTube.">Haz clic en cualquier video para verlo en YouTube.</p>
     <div class="video-grid" id="video-grid">
-      <!-- Videos will be rendered by JS -->
+      <a class="video-card" href="https://www.youtube.com/shorts/apTKCTMSZJk" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Animación</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/apTKCTMSZJk/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/apTKCTMSZJk/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="AG Solutions">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Animación</div>
+          <div class="video-type">AG Solutions</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/lY6kIgfbE44" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Reel</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/lY6kIgfbE44/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/lY6kIgfbE44/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="AG Solutions">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Reel</div>
+          <div class="video-type">AG Solutions</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/XPL03eyDVAo" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Reel</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/XPL03eyDVAo/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/XPL03eyDVAo/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="AG Solutions">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Reel</div>
+          <div class="video-type">AG Solutions</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/oXox4S_X9FI" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Reel</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/oXox4S_X9FI/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/oXox4S_X9FI/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="AG Solutions">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Reel</div>
+          <div class="video-type">AG Solutions</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/ZLIAmCvabeE" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Reel</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/ZLIAmCvabeE/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/ZLIAmCvabeE/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="Campaña">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Reel</div>
+          <div class="video-type">Campaña</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/xNsJoU7VeyI" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Testimonio</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/xNsJoU7VeyI/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/xNsJoU7VeyI/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="Testimoniales">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Testimonio</div>
+          <div class="video-type">Testimoniales</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/M6dCwALZuAk" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Ad</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/M6dCwALZuAk/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/M6dCwALZuAk/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="Video Campaña">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Ad</div>
+          <div class="video-type">Video Campaña</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/diYTP24m2OY" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Ad</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/diYTP24m2OY/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/diYTP24m2OY/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="Video Campaña">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Ad</div>
+          <div class="video-type">Video Campaña</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/B-0aUcLjSCQ" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Ad</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/B-0aUcLjSCQ/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/B-0aUcLjSCQ/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="Brandi">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Ad</div>
+          <div class="video-type">Brandi</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/3M60MaiU6XY" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Remarketing</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/3M60MaiU6XY/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/3M60MaiU6XY/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="Remarketing">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Remarketing</div>
+          <div class="video-type">Remarketing</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/Mjt6la1d9RM" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Ad</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/Mjt6la1d9RM/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/Mjt6la1d9RM/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="Players">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Ad</div>
+          <div class="video-type">Players</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/FPagsiK-BVw" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Ad</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/FPagsiK-BVw/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/FPagsiK-BVw/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="Hotel">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Ad</div>
+          <div class="video-type">Hotel</div>
+        </div>
+      </a>
+      <a class="video-card" href="https://www.youtube.com/shorts/oN_hGik30vo" target="_blank" rel="noopener" style="cursor:pointer;background:#000;text-decoration:none;display:block">
+        <div style="position:absolute;top:10px;left:10px;z-index:2;background:rgba(8,13,15,.82);color:var(--white);font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Ad</div>
+        <div style="position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,0,0,.85);color:#fff;font-family:'Syne',sans-serif;font-size:8px;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:20px;display:flex;align-items:center;gap:4px">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="white"><path d="M2 1l7 4-7 4V1z"/></svg>YT
+        </div>
+        <img src="https://img.youtube.com/vi/oN_hGik30vo/maxresdefault.jpg"
+          onerror="this.src='https://img.youtube.com/vi/oN_hGik30vo/hqdefault.jpg'"
+          style="width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .5s ease"
+          loading="lazy" alt="Seguridad">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,13,15,.75) 0%,rgba(8,13,15,.1) 60%,transparent 100%)"></div>
+        <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
+        <div class="video-overlay">
+          <div class="video-label">Ad</div>
+          <div class="video-type">Seguridad</div>
+        </div>
+      </a>
     </div>
   </section>
 </div>
@@ -677,8 +880,8 @@ footer{background:#040709;padding:36px 80px;display:flex;justify-content:space-b
 <!-- ══ VIDEO MODAL ══ -->
 <div class="modal" id="modal">
   <div class="modal-inner">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <video id="modal-video" controls playsinline></video>
+    <button class="modal-close" onclick="closeDriveModal()">✕</button>
+    <iframe id="modal-iframe" src="" style="width:100%;aspect-ratio:9/16;max-height:88vh;border:none;border-radius:10px" allow="autoplay;fullscreen" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -686,17 +889,7 @@ footer{background:#040709;padding:36px 80px;display:flex;justify-content:space-b
 /* ══ GSAP SETUP ══ */
 gsap.registerPlugin(ScrollTrigger);
 
-/* ══ CURSOR ══ */
-const dot=document.getElementById('c-dot');
-const ring=document.getElementById('c-ring');
-document.addEventListener('mousemove',e=>{
-  gsap.to(dot,{x:e.clientX,y:e.clientY,duration:.05});
-  gsap.to(ring,{x:e.clientX,y:e.clientY,duration:.18});
-});
-document.querySelectorAll('button,a,.svc-tile,.plan-card,.video-card,.hero-card,.audit-card,.dc').forEach(el=>{
-  el.addEventListener('mouseenter',()=>ring.querySelector('.cursor-ring').classList.add('hover'));
-  el.addEventListener('mouseleave',()=>ring.querySelector('.cursor-ring').classList.remove('hover'));
-});
+
 
 /* ══ PARTICLE CANVAS (hero) ══ */
 function initCanvas(){
@@ -741,82 +934,32 @@ function initCanvas(){
 }
 
 /* ══ VIDEOS DATA ══ */
-const videos=[
-  {file:encodeURIComponent('Animación AG SOLUTIONS.mp4'),label:'AG Solutions',type:'Animación'},
-  {file:encodeURIComponent('post 2 reel abril ag_v1.mp4'),label:'AG Solutions',type:'Reel'},
-  {file:encodeURIComponent('Reel 1 AG solutions_v6.mp4'),label:'AG Solutions',type:'Reel'},
-  {file:encodeURIComponent('reel 2 ag solutions_V!.mp4'),label:'AG Solutions',type:'Reel'},
-  {file:encodeURIComponent('reel 4 abril.mp4'),label:'Campaña Abril',type:'Reel'},
-  {file:encodeURIComponent('testimoniales_2.0 v2 sin número.mp4'),label:'Testimoniales',type:'Testimonio'},
-  {file:encodeURIComponent('VIDEO 3 SIN NUMERO.mp4'),label:'Video Campaña',type:'Ad'},
-  {file:encodeURIComponent('VIDEO 5.mp4'),label:'Video Campaña',type:'Ad'},
-  {file:encodeURIComponent('Video 20 seg_Brandi_V6_vendedores.mp4'),label:'Brandi',type:'Ad'},
-  {file:encodeURIComponent('Video remarketing_Gaby C2 (1).mp4'),label:'Remarketing',type:'Remarketing'},
-  {file:encodeURIComponent('video_players_vendedores.mp4'),label:'Players',type:'Ad'},
-  {file:encodeURIComponent('VIDEO HOTEL OP4.mp4'),label:'Hotel',type:'Ad'},
-  {file:encodeURIComponent('Video Yaya_para vendedores 2.0 (1).mp4'),label:'Yaya',type:'Ad'},
-  {file:encodeURIComponent('Video_seguridad_inversionistas_familia (1).mp4'),label:'Seguridad',type:'Ad'},
-];
-
-function buildVideoGrid(){
-  const grid=document.getElementById('video-grid');
-  if(!grid)return;
-  grid.innerHTML=videos.map((v,i)=>`
-    <div class="video-card" data-src="${v.file}" data-label="${v.label}" data-type="${v.type}">
-      <div class="video-thumb" style="width:100%;height:100%;position:relative;background:linear-gradient(135deg,#080d0f,#0f2535)">
-        <video preload="metadata" muted playsinline loop style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></video>
-        <div class="video-fallback" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:1;transition:opacity .3s">
-          <div style="font-family:'Syne',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--lblue)">${v.type}</div>
-          <div style="font-size:13px;color:rgba(255,255,255,.5);font-weight:300">${v.label}</div>
-        </div>
-      </div>
-      <div class="video-play"><svg viewBox="0 0 18 18"><path d="M5 3l12 6-12 6V3z"/></svg></div>
-      <div class="video-overlay">
-        <div class="video-label">${v.type}</div>
-        <div class="video-type">${v.label}</div>
-      </div>
-    </div>
-  `).join('');
-
-  grid.querySelectorAll('.video-card').forEach(card=>{
-    const src=card.dataset.src;
-    const vid=card.querySelector('video');
-    const fallback=card.querySelector('.video-fallback');
-    /* load video lazily */
-    vid.src=src;
-    vid.addEventListener('loadeddata',()=>{
-      fallback.style.opacity='0';
-      setTimeout(()=>fallback.style.display='none',300);
-    });
-    vid.addEventListener('error',()=>{
-      /* keep fallback visible, show error state */
-      fallback.innerHTML=`<div style="font-size:28px">🎬</div><div style="font-family:'Syne',sans-serif;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--lblue);margin-top:4px">${card.dataset.type}</div><div style="font-size:12px;color:rgba(255,255,255,.4);margin-top:2px">${card.dataset.label}</div>`;
-      fallback.style.opacity='1';
-      fallback.style.display='flex';
-    });
-    card.addEventListener('mouseenter',()=>{ try{vid.play()}catch(e){} });
-    card.addEventListener('mouseleave',()=>{ vid.pause();vid.currentTime=0; });
-    card.addEventListener('click',()=>openModal(src));
-  });
-}
-
-function openModal(src){
-  const mv=document.getElementById('modal-video');
-  mv.src=src;
-  mv.load();
-  mv.play().catch(()=>{});
-  document.getElementById('modal').classList.add('open');
+/* ══ YOUTUBE MODAL ══ */
+function openYT(embedUrl){
+  const modal=document.getElementById('modal');
+  const inner=modal.querySelector('.modal-inner');
+  inner.innerHTML=`
+    <button class="modal-close" onclick="closeYT()" style="position:absolute;top:-40px;right:0;background:none;border:none;color:rgba(255,255,255,.8);font-size:28px;cursor:pointer;line-height:1">✕</button>
+    <iframe src="${embedUrl}"
+      style="width:min(90vw,460px);aspect-ratio:9/16;max-height:88vh;border:none;border-radius:12px;display:block"
+      allow="autoplay;fullscreen;picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  `;
+  modal.style.alignItems='center';
+  modal.classList.add('open');
   document.body.style.overflow='hidden';
 }
-function closeModal(){
-  const mv=document.getElementById('modal-video');
-  mv.pause();mv.src='';
-  document.getElementById('modal').classList.remove('open');
+function closeYT(){
+  const modal=document.getElementById('modal');
+  const inner=modal.querySelector('.modal-inner');
+  inner.innerHTML=`<button class="modal-close" onclick="closeYT()">✕</button>`;
+  modal.classList.remove('open');
   document.body.style.overflow='';
 }
-document.getElementById('modal').addEventListener('click',e=>{
-  if(e.target===document.getElementById('modal'))closeModal();
-});
+function buildVideoGrid(){}
+function initFileInput(){}
+function initFileInput(){}
 
 /* ══ LANGUAGE ══ */
 let lang='es';
@@ -843,7 +986,7 @@ function navigate(page){
     setTimeout(()=>{
       initPageAnimations(target);
       if(page==='inicio')initCanvas();
-      if(page==='trabajo')buildVideoGrid();
+      if(page==='trabajo'){buildVideoGrid();setTimeout(initFileInput,100);}
       ScrollTrigger.refresh();
     },80);
   }
