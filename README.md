@@ -8,6 +8,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <style>
+/* ══ FULL WIDTH RESET ══ */
+html{width:100%!important;max-width:100%!important;overflow-x:hidden}
+body{width:100%!important;max-width:100%!important;margin:0!important;padding:0!important;overflow-x:hidden}
+*{max-width:100vw}
+nav,header,footer,.page,.hero,.section,.cta-section{width:100%!important;max-width:100%!important;left:0!important;right:0!important;box-sizing:border-box}
 :root{
   --dark:#080d0f;--lblue:#5b9cc4;--blue:#2077c2;--dblue:#0f5f8a;--red:#f02240;
   --white:#fff;--offwhite:#f7f9fb;--gray:#f2f5f8;--mgray:#d6dde5;--dg:#888;
@@ -15,8 +20,7 @@
   --nav-h:66px;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html,body{width:100%;min-width:320px;max-width:100%!important}
-#app,main,.page,.book{width:100%!important;max-width:100%!important}
+html,body{width:100%!important;min-width:320px;max-width:100%!important;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--white);font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden}
 
